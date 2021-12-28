@@ -1,0 +1,7 @@
+name:    "MyAwesomePlugin"
+version: "1.0"
+main:    "com.example.myawesomeplugin.MyAwesomePlugin"
+
+description: "A clear and concise description of a Spigot plugin."
+author:      "Someone Great"
+api-version: "1.18"
