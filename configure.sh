@@ -50,10 +50,10 @@ sed -i 's/author:      "Someone Great"/author:      "'"$author"'"/' "src/main/re
 
 # Create git repository and create initial commit
 rm -rf ".git"
-git init >/dev/null
-git add .
-git commit -m "Initial commit"
+git init >"/dev/null"
+git add "." >"/dev/null"
+git commit -m "Initial commit" >"/dev/null"
 
 # Remove configuration script
-rm -f "$0"
+rm -f "$0" "README.md" "LICENSE"
 echo "Template project configured and is ready for use!"
