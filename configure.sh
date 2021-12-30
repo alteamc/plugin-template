@@ -12,7 +12,6 @@ prompt() {
 }
 
 prompt package     "Enter your plugin package"     "com.example"
-set -x
 prompt name        "Enter your plugin name"        "$(basename "$(readlink -f "$(dirname -- "$0")")")"
 prompt version     "Enter your plugin version"     "1.0.0"
 prompt description "Enter your plugin description" "A clear and concise description of a Spigot plugin."
