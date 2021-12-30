@@ -72,7 +72,7 @@ sed -i 's/    private static @NotNull MyAwesomePlugin I;/    private static @Not
 
 # Configure plugin.yml
 sed -i 's/name:    "MyAwesomePlugin"/name:    "'"$name"'"/' "src/main/resources/plugin.yml"
-sed -i 's/main:    "com.example.myawesomeplugin.MyAwesomePlugin"/main:    "'"$package"'.'"$name"'"/' "src/main/resources/plugin.yml"
+sed -i 's/main:    "com.example.myawesomeplugin.MyAwesomePlugin"/main:    "'"$package"'.'"$package_name"'.'"$name"'"/' "src/main/resources/plugin.yml"
 # shellcheck disable=SC2154
 sed -i 's/version: "1.0"/version: "'"$version"'"/' "src/main/resources/plugin.yml"
 sed -i 's/description: "A clear and concise description of a Spigot plugin\."/description: "'"$description"'"/' "src/main/resources/plugin.yml"
