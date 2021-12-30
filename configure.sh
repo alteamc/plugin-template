@@ -48,12 +48,13 @@ sed -i 's/description: "A clear and concise description of a Spigot plugin\."/de
 # shellcheck disable=SC2154
 sed -i 's/author:      "Someone Great"/author:      "'"$author"'"/' "src/main/resources/plugin.yml"
 
+# Remove configuration script
+rm -f -- "$0" "README.md" "LICENSE"
+
 # Create git repository and create initial commit
 rm -rf ".git"
 git init >"/dev/null"
 git add "." >"/dev/null"
 git commit -m "Initial commit" >"/dev/null"
 
-# Remove configuration script
-rm -f "$0" "README.md" "LICENSE"
 echo "Template project configured and is ready for use!"
