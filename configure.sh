@@ -1,4 +1,6 @@
 #!/bin/sh
+set -x
+
 prompt() {
   printf "%s" "$2"
   if [ "$#" -gt 2 ]; then
@@ -24,7 +26,7 @@ question() {
     eval "$1"=\""$(printf "%s" "$3" | sed 's/\\/\\\\/' | sed 's/"/\\"/')"\"
   fi
 
-  if [ "$1" = "y" ] || [ "$1" = "yes" ]; then
+  if [ "$(eval printf "%s" '$'"$1")" = "y" ] || [ "$(eval printf "%s" '$'"$1")" = "yes" ]; then
     # shellcheck disable=SC2140
     eval "$1"="1"
   fi
