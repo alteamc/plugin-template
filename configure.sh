@@ -12,10 +12,10 @@ prompt() {
 }
 
 prompt package     "Enter your plugin package"     "com.example"
-prompt name        "Enter your plugin name"        "MyAwesomePlugin"
-prompt version     "Enter your plugin version"     "1.0"
+prompt name        "Enter your plugin name"        "$(basename "$0")"
+prompt version     "Enter your plugin version"     "1.0.0"
 prompt description "Enter your plugin description" "A clear and concise description of a Spigot plugin."
-prompt description "Enter your plugin author name" "Someone Great"
+prompt description "Enter your plugin author name" "$(whoami)"
 
 # shellcheck disable=SC2154
 package_path="$(printf "%s" "$package" | sed 's/\./\//')"
