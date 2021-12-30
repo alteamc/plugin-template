@@ -1,6 +1,4 @@
 #!/bin/sh
-set -x
-
 prompt() {
   printf "%s" "$2"
   if [ "$#" -gt 2 ]; then
