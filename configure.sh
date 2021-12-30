@@ -48,6 +48,9 @@ sed -i 's/description: "A clear and concise description of a Spigot plugin\."/de
 # shellcheck disable=SC2154
 sed -i 's/author:      "Someone Great"/author:      "'"$author"'"/' "src/main/resources/plugin.yml"
 
+# Configure settings.gradle.kts
+sed -i 's/rootProject.name = "MyAwesomePlugin"/rootProject.name = "'"$name"'"/' "settings.gradle.kts"
+
 # Remove configuration script
 rm -f -- "$0" "README.md" "LICENSE"
 
