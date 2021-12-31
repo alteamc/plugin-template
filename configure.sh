@@ -69,6 +69,7 @@ fi
 sed -i 's/public final class MyAwesomePlugin extends JavaPlugin {/public final class '"$name"' extends JavaPlugin {/' "src/main/java/$package_path/$package_name/$name.java"
 sed -i 's/package com.example.myawesomeplugin;/package '"$package"'.'"$package_name"';/' "src/main/java/$package_path/$package_name/$name.java"
 sed -i 's/    private static @NotNull MyAwesomePlugin I;/    private static @NotNull '"$name"' I;/' "src/main/java/$package_path/$package_name/$name.java"
+sed -i 's/    public static @NotNull MyAwesomePlugin getInstance() {/    public static @NotNull '"$name"' getInstance() {/' "src/main/java/$package_path/$package_name/$name.java"
 
 # Configure plugin.yml
 sed -i 's/name:    "MyAwesomePlugin"/name:    "'"$name"'"/' "src/main/resources/plugin.yml"

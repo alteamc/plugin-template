@@ -17,4 +17,8 @@ public final class MyAwesomePlugin extends JavaPlugin {
         //noinspection ConstantConditions
         I = null;
     }
+
+    public static @NotNull MyAwesomePlugin getInstance() {
+        return I;
+    }
 }
