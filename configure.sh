@@ -1,4 +1,12 @@
 #!/bin/sh
+set -x
+if [ "$(dirname "$(readlink -f "$0")")" != "$(pwd)" ]; then
+  orig_cwd="$(pwd)"
+  # shellcheck disable=SC2164
+  cd "$(dirname "$(readlink -f "$0")")"
+  trap 'cd "$orig_cwd"' EXIT
+fi
+
 prompt() {
   printf "%s" "$2"
   if [ "$#" -gt 2 ]; then
