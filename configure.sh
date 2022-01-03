@@ -1,5 +1,4 @@
 #!/bin/sh
-set -x
 if [ "$(dirname "$(readlink -f "$0")")" != "$(pwd)" ]; then
   orig_cwd="$(pwd)"
   # shellcheck disable=SC2164
