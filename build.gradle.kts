@@ -1,9 +1,6 @@
-// Buildscript configuration and plugins
-
-buildscript {
-    dependencies {
-        classpath("com.guardsquare", "proguard-gradle", "7.1.1")
-    }
+java {
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
 }
 
 plugins {
